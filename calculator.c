@@ -18,23 +18,23 @@ int main() {
     
     if (operator == '+') {
         result = num1 + num2;
-        printf("Result: %.2lf\n", result);
     } else if (operator == '-') {
         result = num1 - num2;
-        printf("Result: %.2lf\n", result);
     } else if (operator == '*') {
         result = num1 * num2;
-        printf("Result: %.2lf\n", result);
     } else if (operator == '/') {
         if (num2 != 0) {
             result = num1 / num2;
-            printf("Result: %.2lf\n", result);
         } else {
             printf("Error: Cannot divide by zero!\n");
+            return 0; 
         }
     } else {
         printf("Error: Invalid operator entered.\n");
+        return 0; 
     }
+    
+    printf("Result: %.2lf\n", result);
 
     return 0; 
 }
